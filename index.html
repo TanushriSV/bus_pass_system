@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Route Bus Pass System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Login Form -->
+    <div class="form-card" id="login-section">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUser" placeholder="Username" required />
+        <input type="password" id="loginPass" placeholder="Password" required />
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#" onclick="switchSection('register')">Register here</a></p>
+      </form>
+    </div>
+
+    <!-- Register Form -->
+    <div class="form-card hidden" id="register-section">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <input type="text" id="registerUser" placeholder="Username" required />
+        <input type="password" id="registerPass" placeholder="Password" required />
+        <button type="submit">Register</button>
+        <p>Already have an account? <a href="#" onclick="switchSection('login')">Login here</a></p>
+      </form>
+    </div>
+
+    <!-- Bus Pass Dashboard -->
+    <div class="form-card hidden" id="dashboard-section">
+      <h2>Bus Pass Application</h2>
+      <form id="busPassForm">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <textarea id="address" placeholder="Address" required></textarea>
+        <input type="text" id="organization" placeholder="School/Organization" required />
+        
+        <select id="validity" required>
+          <option disabled selected>Choose Pass Validity</option>
+          <option>1 Month</option>
+          <option>3 Months</option>
+          <option>6 Months</option>
+        </select>
+
+        <input type="file" id="photo" accept="image/*" required />
+        <label><input type="checkbox" id="renew" /> Monthly Renewal</label>
+
+        <select id="payment" required>
+          <option disabled selected>Select Payment Method</option>
+          <option>Credit Card</option>
+          <option>Debit Card</option>
+          <option>UPI</option>
+        </select>
+
+        <button type="submit">Generate Bus Pass</button>
+      </form>
+
+      <div id="output" class="output hidden"></div>
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
