@@ -43,3 +43,6 @@ A **Route Bus Pass System** built using **HTML, CSS, and JavaScript**, allowing 
 
 [View Live Project](https://tanushrisv.github.io/bus_pass_system/)  
 
+
+
+© 2025 Tanushri S V. All rights reserved.
